@@ -9,7 +9,7 @@ how to use test case
     make
     make install
 
-2.comile test code
+2.compile test code
 
     git clone https://github.com/mikulely/s3-cpp-daemon
     cd s3-cpp-daemon
