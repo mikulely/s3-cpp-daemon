@@ -232,7 +232,7 @@ int main(int argc, char** argv)
         &putObjectDataCallback
       };
   //----------------------create bucket-----------------//
-  S3_put_object(&bucketContext, key, contentLength, &putProperties, 0,
+  S3_put_object(&bucketContext, key, contentLength, &putProperties, NULL, 0,
                 &putObjectHandler, &data);
   S3_deinitialize();
 

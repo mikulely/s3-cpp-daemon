@@ -73,16 +73,17 @@ int main(int argc, char** args)
                                                 &listServiceCallback
                                                };
 
+    //-----------------------create bucket------------------------//
+    const char* bucketName = "umstor-bucket";
+    S3_create_bucket(protocolG, accessKeyIdG, secretAccessKeyG, NULL,
+                         NULL, bucketName, "US", S3CannedAclPrivate, NULL, NULL,
+                         0, &responseHandler, NULL);
+
+
     //----------------------list all owned bucket-----------------//
     bool data = false;
-    S3_list_service(protocolG, accessKeyIdG, secretAccessKeyG, 0, 0, 0, 
+    S3_list_service(protocolG, accessKeyIdG, secretAccessKeyG, NULL, NULL, "US", NULL, 0,
                         &listServiceHandler, &data);
-
-    //-----------------------create bucket------------------------//
-    const char* bucketName = "unitedstack-bucket";
-    S3_create_bucket(protocolG, accessKeyIdG, secretAccessKeyG, 0,
-                         0, bucketName, S3CannedAclPrivate, 0, 0,
-                         &responseHandler, 0);
 
     S3_deinitialize();
 

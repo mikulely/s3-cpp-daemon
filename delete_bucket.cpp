@@ -61,7 +61,7 @@ int main(int argc, char** args)
 
   //----------------------create bucket-----------------//
   S3_delete_bucket(protocolG, S3UriStylePath, accessKeyIdG, secretAccessKeyG,
-                   0, 0, bucketName, 0, &responseHandler, 0);
+                   NULL, NULL, bucketName, "US", NULL, 0, &responseHandler, NULL);
   S3_deinitialize();
 
   return 0;

@@ -64,14 +64,15 @@ int main(int argc, char** args)
     S3_create_bucket(protocolG, 
 		    accessKeyIdG, 
 		    secretAccessKeyG, 
-		    0, 
-		    0, 
+		    NULL,
+		    NULL,
 		    bucketName, 
+                    "US",
 		    S3CannedAclPrivate, 
 		    locationConstraint, 
-		    0,
+		    NULL,0,
 		    &responseHandler, 
-		    0);
+		    NULL);
     S3_deinitialize();
 
     return 0;
