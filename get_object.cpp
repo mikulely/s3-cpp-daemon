@@ -118,7 +118,7 @@ int main(int argc, char** argv)
 
   //----------------------create bucket-----------------//
   S3_get_object(&bucketContext, key, &getConditions, startByte,
-                byteCount, 0, &getObjectHandler, outfile);
+                byteCount, NULL, 0, &getObjectHandler, outfile);
   S3_deinitialize();
 
   return 0;

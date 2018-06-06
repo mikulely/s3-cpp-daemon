@@ -19,6 +19,11 @@ how to use test case
     #compile put_object.cpp
     make put_object
     ...
+
+    or
+
+    #compile all
+    make all
     
 3.run test code
 

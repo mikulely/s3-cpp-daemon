@@ -71,8 +71,8 @@ int main(int argc, char** args)
 
   //----------------------check whether bucket is exist-----------------//
   S3_test_bucket(protocolG, S3UriStylePath, accessKeyIdG, secretAccessKeyG,
-                 0, 0, bucketName, sizeof(locationConstraint),
-                 locationConstraint, 0, &responseHandler, 0);
+                 NULL, NULL, bucketName, "US", sizeof(locationConstraint),
+                 locationConstraint, NULL, 0, &responseHandler, NULL);
 
   S3_deinitialize();
 

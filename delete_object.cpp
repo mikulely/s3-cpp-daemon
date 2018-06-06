@@ -82,7 +82,7 @@ int main(int argc, char** argv)
 
 
   //----------------------create bucket-----------------//
-  S3_delete_object(&bucketContext, key, 0, &responseHandler, 0);
+  S3_delete_object(&bucketContext, key, NULL, 0, &responseHandler, NULL);
   S3_deinitialize();
 
   return 0;

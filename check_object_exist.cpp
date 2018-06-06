@@ -82,7 +82,7 @@ int main(int argc, char** args)
   };
 
   //----------------------check whether object is exist-----------------//
-  S3_head_object(&bucketContext, key, 0, &responseHandler, 0);
+  S3_head_object(&bucketContext, key, NULL, 0, &responseHandler, NULL);
 
   S3_deinitialize();
 
